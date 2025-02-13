@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+
+.App {
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+.cyclesSpan {
+  &::before {
+    content: 'repeat: '
+  }
+}
+
+svg {
+  transition: fill 500ms ease-in-out;
+}
