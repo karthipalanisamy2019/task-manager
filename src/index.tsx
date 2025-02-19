@@ -8,10 +8,13 @@ const ROOT_SELECTOR = "#root";
 
 const container = document.querySelector(ROOT_SELECTOR);
 
-const root = createRoot(container);
-
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+if (container) {
+  const root = createRoot(container);
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+} else {
+  console.error(`Element with selector ${ROOT_SELECTOR} not found`);
+}
